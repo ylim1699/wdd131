@@ -1,26 +1,36 @@
 *{
-    font-family:'Times New Roman', Times, serif; 
-    max-width:600px;
-    
-    
+    box-sizing: border-box;  
 }
 
 body {
     display:flex;
     flex-direction:column;
+    justify-content: center;
     align-items: center;
-
+    padding: 10%;
+    font-family:'Times New Roman', Times, serif;  
 }
 
 header {
     display:flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
+    width:100%;
     border-bottom: 2px dashed gray;
+    margin-bottom:5%;
+    letter-spacing:0.3em;
+    text-transform: capitalize;
+}
+
+header h1 {
+    font-size:350%;
 }
 
 header h2 {
     color:#006EB6;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    
 }
 
 main {
@@ -29,4 +39,19 @@ main {
     justify-content: center;
     align-content: center;
     flex-direction:column;
+    margin-bottom:5%
+}
+
+footer {
+    display:flex;
+    justify-content: center;
+}
+
+footer img {
+    width:150px;
+}
+
+ol li {
+    line-height:1.5;
+    padding:1.5%;
 }
