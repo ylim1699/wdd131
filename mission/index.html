@@ -7,9 +7,21 @@
     <meta name="description" content="Mission assignment week1">
     <title>Mission</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="mission.js" defer></script>
 </head>
 <body>
     <header>
+
+        <form>
+            <label for="themeSelector">Light/Dark Mode</label>
+            <select id="themeSelector" name="themeSelector">
+                <option value="nothing">--Please choose an option--</option>
+                <option value="light">Light mode</option>
+                <option value="dark">Dark mode</option>
+                <option value="yellow">Yellow mode</option>
+            </select>
+        </form>
+
         <h1>MISSION STATEMENT</h1>
         <h2>BRIGHAM YOUNG UNIVERSITY-IDAHO</h2>
     </header>
@@ -26,7 +38,7 @@
             </ol>
     </main>
     <footer>
-        <img src="images/byui-logo_blue.webp" alt="logo of byui">
+        <img class="logo" src="images/byui-logo_blue.webp" alt="logo of byui">
     </footer>
 </body>
 </html>

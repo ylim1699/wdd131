@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10%;
-    font-family:'Times New Roman', Times, serif;  
+    font-family:'Times New Roman', Times, serif; 
 }
 
 header {
@@ -36,10 +36,9 @@ header h2 {
 main {
     font-size:20px;
     display:flex;
-    justify-content: center;
-    align-content: center;
     flex-direction:column;
-    margin-bottom:5%
+    margin-bottom:5%;
+    max-width:650px;
 }
 
 footer {
@@ -54,4 +53,22 @@ footer img {
 ol li {
     line-height:1.5;
     padding:1.5%;
+}
+
+.dark {
+    color:white;
+    background-color: #333;
+}
+
+.dark h2 {
+    color:#A0D4ED;
+}
+
+.yellow {
+    color:purple;
+    background-color: yellow;
+}
+
+.yellow h2 {
+    color:rgb(216, 0, 133);
 }
