@@ -5,15 +5,10 @@ themeSelector.addEventListener('change', changeTheme);
 function changeTheme() {
     const selectedTheme = themeSelector.value;
 
-    // resets the logo color to blue
-    const logoSelector = document.querySelector("footer");
-    const image = logoSelector.querySelector("img")
-    image.setAttribute("src", "images/byui-logo_blue.webp");
-
     if (selectedTheme === 'dark') {
         document.body.classList.add('dark');
         document.body.classList.remove('yellow');
-
+        
         const logoSelector = document.querySelector("footer");
         const image = logoSelector.querySelector("img")
         image.setAttribute("src", "images/byui-logo_white.png");
@@ -23,9 +18,19 @@ function changeTheme() {
     else if (selectedTheme === 'yellow') {
         document.body.classList.add('yellow');
         document.body.classList.remove('dark');
+        
+        // resets the logo color to blue
+        const logoSelector = document.querySelector("footer");
+        const image = logoSelector.querySelector("img")
+        image.setAttribute("src", "images/byui-logo_blue.webp");
     }
     else if (selectedTheme === "light") {
         document.body.classList.remove('dark','yellow');
+
+        // resets the logo color to blue
+        const logoSelector = document.querySelector("footer");
+        const image = logoSelector.querySelector("img")
+        image.setAttribute("src", "images/byui-logo_blue.webp");
     }
     else if (selectedTheme === "nothing") {
         
