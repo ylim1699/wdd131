@@ -18,9 +18,9 @@ header, main, footer{
 }
 
 main {
-    display:grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 1.5rem; 
 }
 
 section {
@@ -33,11 +33,6 @@ section {
         background-color: black;
         color: white;
     }
-    main {
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        gap:1rem;
-        
-    }
+    
 
 }
