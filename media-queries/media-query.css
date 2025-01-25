@@ -19,13 +19,13 @@ header, main, footer{
 
 main {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 1.5rem; 
+    grid-template-columns: 1fr; 
+    grid-gap:1.5rem; 
 }
 
 section {
     background-color: white;
-    padding:1rem;
+    padding:5%;
 }
 
 @media screen and (min-width:500px){
@@ -33,6 +33,14 @@ section {
         background-color: black;
         color: white;
     }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.5rem;
+    }
     
+   
+
 
 }
