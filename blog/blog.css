@@ -1,0 +1,90 @@
+:root {
+    --body-color: #EFC69B;
+    --primary-color: #473144;
+    --secondary-color: #AF1B3F;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+.wrapper {
+    padding: 2%;
+}
+
+.skiptocontent a {
+    position: absolute;
+    top: -50px;
+    background-color: rgb(250, 214, 214);
+    padding: 10px;
+    justify-content: flex-start;
+}
+
+.skiptocontent a:focus {
+    top:0;
+}
+
+h1, h2 {
+    font-family: "Lora", "Impact", serif;
+}
+
+h1 {
+    font-size: 200%;
+    text-align: center;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    color: var(--primary-color);
+}
+
+h2 {
+    color: var(--secondary-color);
+}
+
+main {
+    display: grid;
+    grid-template-columns: (3/ 1fr);
+}
+
+.article {
+    grid-column: 1/2;
+}
+
+.book {
+    grid-column: 2/3;
+    justify-self: center;
+}
+
+.read-more {
+    all: unset;
+    color: var(--secondary-color);
+}
+
+.filter {
+    grid-column: 3/4;
+    justify-self: center;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    border-top: 1px solid var(--body-color);
+    border-bottom: 1px solid var(--body-color);
+    padding-bottom: 2.5%;
+    padding-top: 2.5%;
+}
+
+.main-nav li {
+    margin-right: 4%;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: larger;
+}
