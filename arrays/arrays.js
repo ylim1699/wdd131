@@ -26,5 +26,14 @@ const sumWithInitial = gpaValue.reduce(
 
 console.log(sumWithInitial);
 
+// activity 4
+const fruits = ['watermelon','peach','apple','tomato','grape'];
+const shortFruits = fruits.filter(word => word.length < 6);
+console.log(shortFruits);
 
+// activity 5
+const numbers = [12,34,21,54];
+const luckyNumber = 21
+let luckyIndex = numbers.indexOf(luckyNumber);
+console.log(luckyIndex);
 
