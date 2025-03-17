@@ -113,19 +113,23 @@ button {
 .recipe-info {
     display: flex;
     flex-direction: column;
-    margin-top: 5px;
+    margin-top: 0%;
 }
 
 .tag {
-    width: 100px;
-    height: 30px;
     border: 1px solid black;
     text-align: center;
+    padding-left: 0;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    margin-top: 1%;
+    width: 90px;
+    height: 30px;
     margin-left: 7%;
 }
 
-.tag p {
-    margin-top: 6px;
+.tag li {
+    list-style: none;
 }
 
 .recipe-name {
@@ -227,7 +231,7 @@ footer img {
     .recipe-info {
         display: flex;
         flex-direction: column;
-        margin-top: 2%;
+        margin-top: 1.25%;
     }
     
     .tag {
@@ -239,10 +243,6 @@ footer img {
         margin-left: 0%;
     }
     
-    .tag p {
-        margin-top: 6px;
-    }
-
     .rating {
         margin-left: 0%;
     }
