@@ -119,12 +119,13 @@ button {
 .tag {
     border: 1px solid black;
     text-align: center;
-    padding-left: 0;
+    padding: 10px;
+    /* padding-left: 0;
     padding-top: 5px;
-    padding-bottom: 8px;
-    margin-top: 1%;
+    padding-bottom: 8px; */
+    margin-top: 10px;
     width: 90px;
-    height: 30px;
+    /* height: 30px; */
     margin-left: 7%;
 }
 
@@ -142,8 +143,13 @@ button {
     margin-left: 7%;
 }
 
+.recipe-name p {
+    margin-top: 1%;
+}
+
 .rating {
     margin-left: 7%;
+    margin-top: 12%;
 }
 
 .hide {
@@ -235,16 +241,14 @@ footer img {
     }
     
     .tag {
-        width: 65px;
-        height: 30px;
         border: 1px solid black;
-        grid-column: 2/2;
         text-align: center;
         margin-left: 0%;
     }
     
     .rating {
         margin-left: 0%;
+        margin-top: 5%;
     }
     
     .recipe-name {
@@ -255,6 +259,16 @@ footer img {
         height:  75px;
         color: var(--primary-color);
         margin-left: 0%;
+        margin-bottom: 1%;
+    }
+
+    .recipe-name p:first-of-type {
+        margin-bottom: 1%;
+        margin-top: 5%;
+    }
+
+    .recipe-description p {
+        margin-top: 1%;
     }
 
     .hide {
