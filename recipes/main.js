@@ -67,7 +67,6 @@ function init() {
 }
 init();
 
-
 function filter(query) {
   return recipes.filter(recipe => {
     return (
@@ -80,11 +79,10 @@ function filter(query) {
   .sort((a, b) => a.name.localeCompare(b.name));
 }
 
-
-function searchHandler(e) {
-  e.preventDefault()
+function searchHandler(event) {
+  event.preventDefault()
 	// get the search input
-  const searchInput = e.target.querySelector("input[type='searchBar']");
+  const searchInput = event.target.querySelector("input[type='searchBar']");
   // convert the value in the input to lowercase
   const query = searchInput.value.trim().toLowerCase();
   // use the filter function to filter our recipes
