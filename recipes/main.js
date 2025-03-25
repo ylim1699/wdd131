@@ -38,17 +38,16 @@ function recipeTemplate(recipe) {
         let html = `<span
         class="rating"
         role="img"
-        aria-label="Rating: ${rating} out of 5 stars"
->`;
-for (let i = 1; i <= 5; i++) {
-  if (i <= rating) {
-      html += `<span aria-hidden="false" class="icon-star">⭐</span>`;
-    } else {
-      html += `<span aria-hidden="true" class="icon-star-empty">☆</span>`;
+        aria-label="Rating: ${rating} out of 5 stars">`;
+  for (let i = 1; i <= 5; i++) {
+    if (i <= rating) {
+        html += `<span aria-hidden="false" class="icon-star">⭐</span>`;
+      } else {
+        html += `<span aria-hidden="true" class="icon-star-empty">☆</span>`;
+      }
     }
-  }
-  html += `</span>`;
-  return html;
+    html += `</span>`;
+    return html;
 }
 
 function renderRecipes(recipeList) {
@@ -59,6 +58,7 @@ function renderRecipes(recipeList) {
   // Set the HTML strings as the innerHTML of our output element.
   outputElement.innerHTML = html;
 }
+
 function init() {
   // get a random recipe
   const recipe = getRandomListEntry(recipes);
@@ -68,26 +68,28 @@ function init() {
 init();
 
 function filter(query) {
-  return recipes.filter(recipe => {
-    return (
+  const filtered = recipes.filter(recipe => {
+     return (
       recipe.name.toLowerCase().includes(query) ||
-      recipe.discription.toLowerCase().includes(query) ||
+      recipe.description.toLowerCase().includes(query) ||
       recipe.tags?.some(tag => tag.toLowerCase().includes(query)) ||
       recipe.ingredients?.some(ingredient => ingredient.toLowerCase().includes(query))
     );
   })
-  .sort((a, b) => a.name.localeCompare(b.name));
+  const sorted = filtered.sort((a, b) => a.name.localeCompare(b.name));
+  return sorted;
 }
 
 function searchHandler(event) {
   event.preventDefault()
 	// get the search input
-  const searchInput = event.target.querySelector("input[type='searchBar']");
+  const searchInput = event.target.querySelector("input[type='text']");
   // convert the value in the input to lowercase
   const query = searchInput.value.trim().toLowerCase();
   // use the filter function to filter our recipes
   const filteredRecipe = filter(query);
   // render the filtered list
+  renderRecipes(filteredRecipe);
 }
 
-document.querySelector("searchBar").addEventListener("submit", searchHandler);
+document.querySelector("#searchBar").addEventListener("submit", searchHandler);
