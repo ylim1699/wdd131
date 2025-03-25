@@ -93,3 +93,7 @@ function searchHandler(event) {
 }
 
 document.querySelector("#searchBar").addEventListener("submit", searchHandler);
+
+
+
+
