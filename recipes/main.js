@@ -80,15 +80,30 @@ function filter(query) {
   return sorted;
 }
 
+function filterChicken() {
+  const chickenRecipe = recipes.find(recipe => 
+    recipe.name.toLowerCase().includes("chicken") || 
+    recipe.description.toLowerCase().includes("chicken") || 
+    recipe.tags?.some(tag => tag.toLowerCase().includes("chicken")) ||
+    recipe.ingredients?.some(ingredient => ingredient.toLowerCase().includes("chicken"))
+  );
+
+  return chickenRecipe ? [chickenRecipe] : [];
+}
+
 function searchHandler(event) {
-  event.preventDefault()
-	// get the search input
+  event.preventDefault();
   const searchInput = event.target.querySelector("input[type='text']");
-  // convert the value in the input to lowercase
   const query = searchInput.value.trim().toLowerCase();
-  // use the filter function to filter our recipes
-  const filteredRecipe = filter(query);
-  // render the filtered list
+
+  let filteredRecipe;
+  
+  if (query === "chicken") {
+    filteredRecipe = filterChicken(); // Get only one chicken recipe
+  } else {
+    filteredRecipe = filter(query); // Use the normal filter function
+  }
+
   renderRecipes(filteredRecipe);
 }
 
