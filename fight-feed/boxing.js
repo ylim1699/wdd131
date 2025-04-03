@@ -93,4 +93,3 @@ document.querySelector(".logo-mainB").addEventListener("click", function(event) 
     }
 });
 
-{/* <div class="vs2"><img src="./images/vs.png" alt="VS sign"></div> */}
