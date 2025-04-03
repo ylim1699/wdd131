@@ -43,6 +43,7 @@ body {
     align-items: center; 
     min-height: 100vh; 
     margin: 0;
+    
   }
   
 .wrapper {
@@ -87,15 +88,6 @@ main {
   margin-bottom: 5%;
 }
 
-form {
-  margin-top: 5%;
-}
-
-#date-select {
-  width: 100px;
-  font-size: 20px;
-}
-
 .logo-mainU {
   width: 1000px;
   padding-bottom: 3%;
@@ -103,6 +95,7 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 3%;
 }
 
 .logo-mainU img {
@@ -181,15 +174,19 @@ form {
   transition: all 0.2s ease-in-out;
 }
 
-.ufc-info .one{
-  grid-column: 2/4;
-  grid-row: 3/5;
-}
-
-.ufc-info .one img {
+.ufc-info .one img,
+.ufc-info .two img,
+.ufc-info .three img,
+.ufc-info .four img
+{
   width: 180px;
   height: 200px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+}
+
+.ufc-info .one{
+  grid-column: 2/4;
+  grid-row: 3/5;
 }
 
 .ufc-info .two {
@@ -198,22 +195,10 @@ form {
   justify-self: end;
 }
 
-.ufc-info .two img{
-  width: 180px;
-  height: 200px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
-}
-
 .ufc-info .three {
   grid-column: -4/-2;
   grid-row: 6/8;
   justify-self: end;
-}
-
-.ufc-info .three img {
-  width: 180px;
-  height: 200px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 
 .ufc-info .four {
@@ -221,18 +206,16 @@ form {
   grid-row: 6/8;
 }
 
-.ufc-info .four img {
+/* boxing-info */
+.boxing-info .one img, 
+.boxing-info .two img,
+.boxing-info .three img,
+.boxing-info .four img
+{
   width: 180px;
   height: 200px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
-}
-/*  */
-
-/* boxing-info */
-.boxing-info img {
-  width: 150px;
-  height: 125px;
   border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 
 .boxing-info {
@@ -265,22 +248,10 @@ form {
   grid-row: 3/5;
 }
 
-.boxing-info .one img {
-  width: 180px;
-  height: 200px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
-}
-
 .boxing-info .two {
   grid-column: -4/-2;
   grid-row: 3/5;
   justify-self: end;
-}
-
-.boxing-info .two img{
-  width: 180px;
-  height: 200px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 
 .boxing-info .three {
@@ -289,35 +260,18 @@ form {
   justify-self: end;
 }
 
-.boxing-info .three img {
-  width: 180px;
-  height: 200px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
-}
-
 .boxing-info .four {
   grid-column: 2/4;
   grid-row: 6/8;
 }
 
-.boxing-info .four img {
-  width: 180px;
-  height: 200px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
-}
 /*  */
-
 .vs1 {
   grid-column: 5/6;
   grid-row: 3/5;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.vs1 img {
-  width: 125px;
-  height: 100px;
 }
 
 .vs2 {
@@ -328,9 +282,14 @@ form {
   align-items: center;
 }
 
-.vs2 img {
-  width: 125px;
-  height: 100px;
+.vs1 p {
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.vs2 p {
+  font-size: 100px;
+  font-weight: bold;
 }
 
   /* footer */
