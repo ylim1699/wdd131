@@ -103,6 +103,3 @@ document.querySelector(".ufc-info").addEventListener("click", function(event) {
     }
 });
 
-
-
-
