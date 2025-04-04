@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
-
 :root {
   --primary-color: #2C497F;
   --secondary-color: #808A9F;
@@ -43,11 +42,10 @@ body {
     align-items: center; 
     min-height: 100vh; 
     margin: 0;
-    
-  }
+}
   
 .wrapper {
-    width: 1800px;
+    width: 100%;
 }
 
 /* header */
@@ -100,7 +98,7 @@ main {
 
 .logo-mainU img {
   width: 150px;
-  height: 125px;
+  height: 150px;
 }
 
 .logo-mainB {
@@ -138,7 +136,7 @@ main {
 .ufc-info {
   margin-top: 3%;
   border: 3px, solid black;
-  width: 900px;
+  width: 500px;
   height: 900px;
 
   display: grid;
@@ -157,7 +155,7 @@ main {
   display: flex;
   justify-content: space-between;
   grid-row: 2/3;
-  grid-column: 4/7;
+  grid-column: 3/8;
 }
 
 .ufc-buttons button {
@@ -221,7 +219,7 @@ main {
 .boxing-info {
   margin-top: 3%;
   border: 3px, solid black;
-  width: 900px;
+  width: 500px;
   height: 900px;
 
   display: grid;
@@ -283,12 +281,12 @@ main {
 }
 
 .vs1 p {
-  font-size: 100px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 .vs2 p {
-  font-size: 100px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -320,9 +318,57 @@ main {
   
   footer img {
     width: 30px;
+    height: 30px;
     border-radius: 20%;
   }
 
   footer p {
     margin-left: 2%;
   }
+
+  @media screen and (min-width:950px)
+{
+  .ufc-info {
+    margin-top: 3%;
+    border: 3px, solid black;
+    width: 900px;
+    height: 900px;
+  
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+
+  .vs1 p {
+    font-size: 100px;
+    font-weight: bold;
+  }
+  
+  .vs2 p {
+    font-size: 100px;
+    font-weight: bold;
+  }
+
+  .ufc-buttons {
+    grid-column: 4/7;
+  }
+  
+  .wrapper {
+    width: 1800px;
+  }
+
+  .boxing-info {
+    margin-top: 3%;
+    border: 3px, solid black;
+    width: 900px;
+    height: 900px;
+  
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+
+  body {
+    width:100%;
+  }
+}

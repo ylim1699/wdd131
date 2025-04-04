@@ -41,7 +41,7 @@ header img {
   width: 50px;
   border-radius: 35%;
   padding: 10px;
-  background-color: var(--accent1-color)
+  background-color: var(--accent1-color);
 }
 
 header > h1,
@@ -102,29 +102,35 @@ p {
 
 main {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+}
+
+
+main nav {
+  padding: 5% 5%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.ufcLink {
-  padding: 2.5% 2.5%;
-  background-color: var(--accent1-color);
-  border-radius: 5%;
+main img {
+  width: 125px;
+  height: 100px;
 }
 
-.ufcLink img {
-  width: 400px;
-  height: 300px;
-}
-
+.ufcLink,
 .boxingLink {
-  padding: 2.5% 2.5%;
+  padding: 5%;
   background-color: var(--accent1-color);
   border-radius: 5%;
+  width: 300px;
+  margin: 5%;
 }
 
+.ufcLink img,
 .boxingLink img {
-  width: 400px;
+  width: 300px;
   height: 300px;
 }
 
@@ -135,19 +141,6 @@ main {
 .boxingLink:hover {
   box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.7);
 }
-
-main nav {
-  display: flex;
-  gap: 10%;
-  padding: 5% 5%;
-  justify-content: center;
-}
-
-main img {
-  width: 125px;
-  height: 100px;
-}
-
 
 /* footer */
 
@@ -199,5 +192,41 @@ footer img {
   margin-right: 40%;
 }
 
+@media screen and (min-width:1050px)
+{
 
+  main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  main nav {
+    display: flex;
+    gap: 10%;
+    padding: 5% 5%;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  main img {
+    width: 125px;
+    height: 100px;
+  }
+
+  .ufcLink,
+  .boxingLink {
+    padding: 2.5% 2.5%;
+    background-color: var(--accent1-color);
+    border-radius: 5%;
+    width: 400px;
+  }
+  
+  .ufcLink img,
+  .boxingLink img {
+    width: 400px;
+    height: 300px;
+  }
+  
+}
 
